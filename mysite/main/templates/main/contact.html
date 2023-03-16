@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}Contact{% endblock %}
+
+
+{% block name %}Contact page{% endblock %}
+
+
+{% block body %}
+    <form method="post">
+        {% csrf_token %}
+        <p>
+            <input type="text" name="user_name" id="" placeholder="Username">
+        </p>
+        <p>
+            <input type="text" name="user_email" id="" placeholder="Email">
+        </p>
+        <p>
+            <input type="text" name="user_review" id="" placeholder="Review">
+        </p>
+
+        <button type="submit">Send</button>
+    </form>
+{% endblock %}

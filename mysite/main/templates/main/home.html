@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block name %}Home page{% endblock %}
+
+
+{% block body %}
+    {% for i in car_list %}
+        <h3>{{ i.name }}</h3>
+        <img src="{{ i.img.url }}" width="400px" alt="">
+        <p>{{ i.price }}</p>
+    {% endfor %}
+{% endblock %}
